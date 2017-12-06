@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>Project</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="layout.css">
+<style>
+.checked {
+    color: orange;
+}
+</style>
+</head>
+<body>
+<div class="fixed-bg">
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="img1.jpg" style="width:100%" height="300px">
+    <div class="text1">Collection of over 500+ books</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img2.jpg" style="width:100%" height="300px">
+    <div class="text2">Complete description of each book</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img3.jpg" style="width:100%" height="300px">
+    <div class="text3">Find.Explore.Read</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<div style="position:relative;background:linear-gradient(lightgreen,darkgreen);color:white;font-family:system-ui;height:100px"><h1 style="height:100px;position:absolute;margin-left:676px">Pick-A-Read</h1></div>
+<div class="topnav">
+  <a href="Proj1.html">Home</a>
+  <a href="addbook.html">Add a Book</a>
+  <a href="contact.html">Contact</a>
+  <a href="about.html">About</a>
+  <a href="login.html">Login</a>
+  <a href="signup.html">Sign Up</a>
+</div>
+
+<img src="shakespeare.jpg" align="left" height="650px" width="440px">
+<h3>About the book</h3>
+<p style="color:green;margin-right=60">Complete Works of William Shakespeare is the standard name given to any volume containing all the plays and poems of William Shakespeare. 
+Some editions include several works which were not completely of Shakespeare's authorship (collaborative writings), such as The Two Noble Kinsmen, a collaboration with John Fletcher,
+Pericles, Prince of Tyre or Edward III. The various editions of the Complete Works include a number of university press releases, as well as versions released from larger publishing companies. The Complete Works (especially in older editions) are often sought after by book collectors, and a number of binderies and publishing houses have produced leather bound and gilded releases for luxury book collecting.
+Both mainstream and academic publishing companies have released multiple editions and versions of their own collections of Shakespeare's work, often updated periodically.
+Multiple editors add to the processes of laying out the Complete Works, and many times either the main editor, publishing company, or university's name is included in the title.</p>
+<h4>Summary</h4>
+Can three guys really cover thirty-seven Shakespeare plays in less than two hours? This fast-firing comedy does just that as it parodies all of the Shakespeare plays 
+(plus the sonnets!) with only three performers in two acts. This play is full of energy as the characters run across the stage and keep you guessing how they will pull off the 
+next play. Clever use of some interesting costumes also adds to the fun. The play starts with an eccentric version of Romeo and Juliet, followed by a parody of Titus Andronicus 
+(which is portrayed as a cooking show). Next is Othello, which is done as a rap song (the infamous “Othello Rap”). The members of the trio compete in a hilarious football game 
+which summarizes the histories (King John, Richard II, Richard III, Henry IV etc), complete with commentary and details of each character's rise and fall from power. As the 
+characters are about to come to the end of the first act, they realize they forgot to perform Hamlet. One of the actors becomes nervous and runs out of the theatre with another 
+actor chasing him. The final actor is left to entertain the audience by himself, which he does by telling jokes and calling for the intermission. After the intermission, the missing
+two actors return and save their companion from reciting all of the sonnets. All three actors then perform their very abbreviated version of Hamlet (with a little help from the 
+audience), thus “completing” the canon in only an hour and a half!
+
+<br/><h4>Rating: 
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span></h4>
+<h4>Suggested Reading</h4>
+<a href="thejunglebook.html"><img src="junglebook.png" height="140px" width="100px"></a>
+<a href="adventuresofsherlockholmes.html"><img src="adventuresofsherlockholmes.jpg" height="140px" width="100px"></a>
+<a href="ataleoftwocities.html"><img src="ataleoftwocities.jpg" height="140px" width="100px"></a>
+<a href="https://www.amazon.in/Complete-Works-Shakespeare-William/dp/0007208316/ref=sr_1_1?ie=UTF8&qid=1510084642&sr=8-1&keywords=the+complete+works+of+william+shakespeare&dpID=41ndjBRfFuL&preST=_SY344_BO1,204,203,200_QL70_&dpSrc=srch">
+<img src="amazonbuy.jpg" style="margin-left:550px"></a>
+
+</body>
+</html>

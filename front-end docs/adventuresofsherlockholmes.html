@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>Project</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="layout.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.checked {
+    color: orange;
+}
+</style>
+</head>
+<body>
+<div class="fixed-bg">
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="img1.jpg" style="width:100%" height="300px">
+    <div class="text1">Collection of over 500+ books</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img2.jpg" style="width:100%" height="300px">
+    <div class="text2">Complete description of each book</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img3.jpg" style="width:100%" height="300px">
+    <div class="text3">Find.Explore.Read</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<div style="position:relative;background:linear-gradient(lightgreen,darkgreen);color:white;font-family:system-ui;height:100px"><h1 style="height:100px;position:absolute;margin-left:676px">Pick-A-Read</h1></div>
+<div class="topnav">
+  <a href="Proj1.html">Home</a>
+  <a href="addbook.html">Add a Book</a>
+  <a href="contact.html">Contact</a>
+  <a href="about.html">About</a>
+  <a href="login.html">Login</a>
+  <a href="signup.html">Sign Up</a>
+</div>
+
+<img src="adventuresofsherlockholmes.jpg" align="left" height="605px" width="360px">
+<center>
+<h3>The Adventures of Sherlock Holmes</h3>
+<h4>Author : <span style="color:green">Sir Arthur Conan Doyle</span></h4>
+</center>
+<h4>About the book</h4>
+<p style="color:green;margin-right=60">The Adventures of Sherlock Holmes is a collection of twelve short stories by Arthur Conan Doyle, featuring his fictional detective Sherlock Holmes. It was first published on 
+14 October 1892; the individual stories had been serialised in The Strand Magazine between July 1891 and June 1892. The stories are not in chronological order, and the only 
+characters common to all twelve are Holmes and Dr. Watson. In general the stories in The Adventures of Sherlock Holmes identify, and try to correct, social injustices. 
+Holmes is portrayed as offering a new, fairer sense of justice. </p>
+<h4>Summary</h4>
+All of the stories within The Adventures of Sherlock Holmes are told in a first-person narrative from the point of view of Dr. Watson, as is the case for all but four of the 
+Sherlock Holmes stories. The Oxford Dictionary of National Biography entry for Doyle suggests that the short stories contained in The Adventures of Sherlock Holmes 
+tend to point out social injustices, such as "a king's betrayal of an opera singer, a stepfather's deception of his ward as a fictitious lover, an aristocratic crook's exploitation of
+a failing pawnbroker, a beggar's extensive estate in Kent." It suggests that, in contrast, Holmes is portrayed as offering a fresh and fair approach in an unjust world of
+"official incompetence and aristocratic privilege".
+
+<br/><h4>Rating: 
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span></h4>
+<h4>Suggested Reading</h4>
+<a href="thejunglebook.html"><img src="junglebook.png" height="140px" width="100px"></a>
+<a href="shakespeare.html"><img src="shakespeare.jpg" height="140px" width="100px"></a>
+<a href="ataleoftwocities.html"><img src="ataleoftwocities.jpg" height="140px" width="100px"></a>
+<i class="fa fa-amazon" style="font-size:24px"></i>
+<a href="https://www.amazon.in/Adventures-Sherlock-Holmes-Arthur-Conan/dp/8175993863/ref=sr_1_1?s=books&ie=UTF8&qid=1510084950&sr=1-1&keywords=adventures+of+sherlock+holmes">
+<img src="amazonbuy.jpg" style="margin-left:550px"></a>
+
+</body>
+</html>

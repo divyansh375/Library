@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>Project</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="layout.css">
+<style>
+.checked {
+    color: orange;
+}
+</style>
+</head>
+<body>
+<div class="fixed-bg">
+<div class="slideshow-container">
+  <div class="mySlides fade">
+	<img src="img1.jpg" style="width:100%" height="300px">
+    <div class="text1">Collection of over 500+ books</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img2.jpg" style="width:100%" height="300px">
+    <div class="text2">Complete description of each book</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img3.jpg" style="width:100%" height="300px">
+    <div class="text3">Find.Explore.Read</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<div style="position:relative;background:linear-gradient(lightgreen,darkgreen);color:white;font-family:system-ui;height:100px"><h1 style="height:100px;position:absolute;margin-left:676px">Pick-A-Read</h1></div>
+<div class="topnav">
+  <a href="Proj1.html">Home</a>
+  <a href="addbook.html">Add a Book</a>
+  <a href="contact.html">Contact</a>
+  <a href="about.html">About</a>
+  <a href="login.html">Login</a>
+  <a href="signup.html">Sign Up</a>
+</div>
+
+<img src="ataleoftwocities.jpg" align="left" height="750px" width="440px">
+<h3>About the book</h3>
+<p style="color:green;margin-right=60">A Tale of Two Cities (1859) is a novel by Charles Dickens, set in London and Paris before and during the French Revolution. The novel tells 
+the story of the French Doctor Manette, his 18-year-long imprisonment in the Bastille in Paris and his release to life in London with his daughter Lucie, whom he had never met; 
+Lucie's marriage and the collision between her beloved husband and the people who caused her father's imprisonment; and Monsieur and Madame Defarge, sellers of wine in a poor suburb
+of Paris. The story is set against the conditions that led up to the French Revolution and the Reign of Terror. </p>
+<h4>Summary</h4>
+A Tale of Two Cities contrasts the social and political events taking place in Paris and London during (and prior to) the French Revolution in the mid-to-late eighteenth century. 
+Dickens draws unsettling parallels between the two cities, describing abject poverty, appalling starvation, rampant crime, ruthless capital punishment, and aristocratic greed. 
+The novel, which was published in three books during the mid-nineteenth century, retrospectively questions the degree to which the French revolutionaries of the late eighteenth 
+century upheld Enlightenment-era ideals of rational thought, tolerance, constitutional government, and liberty.<b> Book the First: Recalled to Life</b> Book One opens in 1775 and 
+focuses on the symbolic resurrection of Dr. Alexandre Manette, who has finally been released after an eighteen-year imprisonment in the Bastille. Lucie Manette (his dutiful 
+seventeen-year-old daughter) and Jarvis Lorry (a business-minded bank clerk) retrieve him from a garret at the top of a wine shop in Paris. Dr. Manette cannot remember who he is, 
+but he begins to recall his past life after seeing Lucie for the first time.<b> Book the Second: The Golden Thread</b> Book Two takes place five years after the events of Book One. It 
+focuses on Charles Darnay, a French emigrant who denounces his aristocratic heritage for a new life in England. Darnay, whose real surname is Evrémonde, is on trial for treason—but 
+is spared by the intervention of Sydney Carton, a young, alcoholic attorney who happens to be nearly identical to Darnay. Dr. Manette, who made a full recovery from his 
+trauma-induced memory loss, builds a successful medical practice in his home near Soho. Darnay, unaware that his father and uncle were responsible for Dr. Manette’s long imprisonment, falls in love with Lucie Manette, and the two marry. The novel’s preoccupation with revolutionary sentiment deepens as the French peasantry buckles under increasing oppression 
+from the aristocracy. The French Revolution begins, and Darnay decides to rescue his uncle’s longtime servant, Monsieur Gabette, from Paris.<b> Book the Third: The Track of a Storm</b>
+Book Three highlights the brutality of the French Revolution, particularly during the Reign of Terror in Paris between 1793 and 1794. Darnay, who cannot hide his aristocratic 
+heritage, is imprisoned for the crimes of the Evrémondes. He is initially released (with the help of Dr. Manette, who rushed to Paris with Lucie after they learned about Darnay’s 
+imprisonment) but is rearrested and sentenced to death. Ultimately, Sydney Carton, the irredeemable drunk, selflessly switches places with Darnay—sacrificing himself so Lucie, 
+whom he loves, can return to London with her husband and daughter.
+
+<br/><h4>Rating: 
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span></h4>
+<h4>Suggested Reading</h4>
+<a href="thejunglebook.html"><img src="junglebook.png" height="140px" width="100px"></a>
+<a href="shakespeare.html"><img src="shakespeare.jpg" height="140px" width="100px"></a>
+<a href="adventuresofsherlockholmes.html"><img src="adventuresofsherlockholmes.jpg" height="140px" width="100px"></a>
+<a href="https://www.amazon.in/Tale-Two-Cities-Penguin-Classics/dp/0141439602/ref=sr_1_1?s=books&ie=UTF8&qid=1510085197&sr=1-1&keywords=a+tale+of+two+cities+by+charles+dickens&dpID=61c8oYXDk1L&preST=_SY264_BO1,204,203,200_QL40_&dpSrc=srch">
+<img src="amazonbuy.jpg" style="margin-left:550px"></a>
+
+</body>
+</html>

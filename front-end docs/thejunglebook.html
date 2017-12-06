@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>Project</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="layout.css">
+<style>
+.checked {
+    color: orange;
+}
+</style>
+</head>
+
+<body>
+<div class="fixed-bg">
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="img1.jpg" style="width:100%" height="300px">
+    <div class="text1">Collection of over 500+ books</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img2.jpg" style="width:100%" height="300px">
+    <div class="text2">Complete description of each book</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img3.jpg" style="width:100%" height="300px">
+    <div class="text3">Find.Explore.Read</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<div style="position:relative;background:linear-gradient(lightgreen,darkgreen);color:white;font-family:system-ui;height:100px"><h1 style="height:100px;position:absolute;margin-left:676px">Pick-A-Read</h1></div>
+<div class="topnav">
+  <a href="Proj1.html">Home</a>
+  <a href="addbook.html">Add a Book</a>
+  <a href="contact.html">Contact</a>
+  <a href="about.html">About</a>
+  <a href="login.html">Login</a>
+  <a href="signup.html">Sign Up</a>
+</div>
+
+<img src="junglebook.png" align="left" height="510px" width="340px">
+<h3>About the book</h3>
+<p style="color:green;margin-right=60">The Jungle Book (1894) is a collection of stories by English author Rudyard Kipling. The stories are fables, using animals in an anthropomorphic manner to give moral lessons. 
+A principal character is the boy or "man-cub" Mowgli, who is raised in the jungle by wolves. Other characters include Shere Khan the tiger and Baloo the bear. 
+The book has been adapted many times for film and other media.</p>
+<h4>Summary</h4>
+In The Jungle Book, a young boy named Mowgli becomes a member of the Seeonee Wolf Pack. A cruel tiger named Shere Khan plots against Mowgli and the leader of his pack, Akela. 
+When Mowgli grows up, he realizes that he must rejoin the ranks of men. Mowgli strays from his village one day. After being attacked by Shere Khan, he's saved by Father Wolf, 
+who asks Akela, the leader of the wolves, to accept Mowgli as a member of the pack. Mowgli briefly returns to the world of men, but leaves after he learns that Shere Khan has been 
+plotting against Akela. He defeats the tiger, but knows that someday he will rejoin the man-pack. A python named Kaa takes Mowgli down to the Cold Lairs, where he steals an ankus. 
+He discards the ankus, fearing its deadly curse. This results in the death of six men. After this incident, Mowgli becomes unhappy and gradually drifts toward the world of men.
+
+<br/><h4>Rating: 
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span></h4>
+<h4>Suggested Reading</h4>
+<a href="adventuresofsherlockholmes.html"><img src="adventuresofsherlockholmes.jpg" height="140px" width="100px"></a>
+<a href="shakespeare.html"><img src="shakespeare.jpg" height="140px" width="100px"></a>
+<a href="ataleoftwocities.html"><img src="ataleoftwocities.jpg" height="140px" width="100px"></a>
+<a href="https://www.amazon.in/Jungle-Book-Rudyard-Kipiling/dp/9383202769/ref=sr_1_2?s=books&ie=UTF8&qid=1510085112&sr=1-2&keywords=the+jungle+book&dpID=51AAwAfHd2L&preST=_SY264_BO1,204,203,200_QL40_&dpSrc=srch">
+<img src="amazonbuy.jpg" style="margin-left:550px"></a>
+
+</body>
+</html>

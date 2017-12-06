@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Project</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="layout.css">
+</head>
+
+<body>
+<div class="fixed-bg">
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="img1.jpg" style="width:100%" height="300px">
+    <div class="text1">Collection of over 500+ books</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img2.jpg" style="width:100%" height="300px">
+    <div class="text2">Complete description of each book</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img3.jpg" style="width:100%" height="300px">
+    <div class="text3">Find.Explore.Read</div>
+  </div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 3500); 
+}
+</script>
+
+<div style="position:relative;background:linear-gradient(lightgreen,darkgreen);color:white;font-family:system-ui;height:100px"><h1 style="height:100px;position:absolute;margin-left:685px">Pick-A-Read</h1></div>
+<div class="topnav">
+  <a href="Proj1.html">Home</a>
+  <a href="addbook.html">Add a Book</a>
+  <a href="contact.html">Contact</a>
+  <a class="active" href="about.html">About</a>
+  <a href="login.html">Login</a>
+  <a href="signup.html">Sign Up</a>
+</div>
+<h2>About</h2>
+<p style="font-family:system-ui">Are you an avid reader? Do you sometimes feel that you could simply get lost in a world full of books? Then you have come to the right place! Over here on Pick-A-Read, 
+we have hundreds of books available at your service. Feel free to browse all of them. If you like it, then buy it! Add your book preferences to keep a track of related books which you can explore on 
+our site anytime. Happy reading!</p>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+<head>
+<script type="text/javascript">
+$(document).ready(function(){
+   setTimeout(function(){
+      PopUp();
+   },5000); // 5000 to load it after 5 seconds from page load
+});	
+function PopUp(){
+        document.getElementById('ac-wrapper').style.display="none";
+	
+}
+$('#closepopup').click(function() {
+$('#popup').dialog('close');
+});
+</script>
+<style>
+#ac-wrapper {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(255,255,255,.6);
+z-index: 1001;
+}
+#popup{
+width: 555px;
+height: 375px;
+background: #FFFFFF;
+border: 5px solid #000;
+border-radius: 25px;
+-moz-border-radius: 25px;
+-webkit-border-radius: 25px;
+box-shadow: #64686e 0px 0px 3px 3px;
+-moz-box-shadow: #64686e 0px 0px 3px 3px;
+-webkit-box-shadow: #64686e 0px 0px 3px 3px;
+position: relative;
+top: 150px; left: 375px;
+}
+</style>
+</head>
+<body>
+<div id="ac-wrapper">
+  <div id="popup">
+  <center>
+    <h2>Popup Content Here</h2>
+	<input type="button" value="Close this popup" id="closepopup"></input>
+  </center>
+  </div>
+</div>
+
+<p>Page Content Here......</p>
+</body>
+</html>
